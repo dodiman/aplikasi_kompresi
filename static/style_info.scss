@@ -1,0 +1,33 @@
+@import "mixin_utama";
+
+.kotak-info {
+    @include kotak;
+    // @include garis;
+    gap: 10px;
+    padding-top: 30px;
+    
+    .kotak-foto, .kotak-keterangan {
+        @include kotak;
+        @include bayangan;
+        background-color: white;
+        height: 400px;
+        width: 30%;
+        border-radius: 10px;
+    }
+
+    .kotak-keterangan {
+        @include kotak;
+        @include bayangan;
+        background-color: white;
+        
+        h2 {
+            @include text;
+        }
+    }
+}
+
+
+.text {
+    @include text;
+    @include ukuran-huruf(2em);
+}

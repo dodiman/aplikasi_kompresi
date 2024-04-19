@@ -1,0 +1,8 @@
+django==4.2.*
+flask==3.0.3
+matplotlib==3.8.4
+notebook==7.*
+pandas==2.*
+statsmodels==0.14.1
+Flask-Session==0.*
+Flask-RESTful==0.*

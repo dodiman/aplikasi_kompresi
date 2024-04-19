@@ -1,0 +1,132 @@
+@import 'mixin_utama';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+body {
+    background-color: #FAFAFA;
+    white-space: nowrap;
+}
+
+.sidebar {
+    @include kotak;
+    // @include garis;
+    @include sidebar($background: transparent, $height: auto, $width: 200px);
+    top: 60px;
+    left: 10px;
+    // bottom: 200px;
+    align-items: start;
+    padding: 10px 10px 10px 10px;
+
+    ul {
+        // @include garis;
+        width: 100%;
+        li {
+            @include garis;
+            display: flex;
+            margin-bottom: 5px;
+            // flex-direction: column;
+            
+            
+            a {
+                @include garis($warna: black, $ketebalan: 1px);
+                width: 100%;
+                background-color: white;
+                color: black;
+                padding: 10px;
+                @include text;
+                @include transisi;
+                
+                &:hover {
+                    @include garis($warna: pink, $ketebalan: 1px);
+                    background-color: green;
+                    color: yellow;
+                }
+                
+            }
+        }
+    }
+    
+}
+
+// .sidebar {
+//     display: inline-block;
+// }
+
+// .content {
+//     @include container;
+    
+    
+// }
+
+// .tombol {
+//     display: inline-block;
+//     padding: 10px 20px;
+//     font-size: 16px;
+//     font-weight: bold;
+//     text-align: center;
+//     text-decoration: none;
+//     border: 2px solid #007bff; /* Border color */
+//     color: #007bff; /* Text color */
+//     background-color: #fff; /* Background color */
+//     border-radius: 5px; /* Rounded corners */
+//     cursor: pointer;
+//     transition: background-color 0.3s, color 0.3s; /* Transition effect */
+//   }
+  
+//   .tombol:hover {
+//     background-color: #007bff; /* Change background color on hover */
+//     color: #fff; /* Change text color on hover */
+//   }
+
+//   /* Style for the unordered list */
+// ul {
+//     list-style-type: none; /* Remove default list bullet */
+//     padding: 0; /* Remove default padding */
+//     margin: 0; /* Remove default margin */
+//   }
+  
+//   /* Style for the list items */
+//   ul li {
+//     margin-bottom: 10px; /* Add space between list items */
+//   }
+  
+//   /* Style for the anchor tags */
+//   ul li a {
+//     display: block; /* Make the anchor tags block elements to fill the entire list item */
+//     padding: 10px; /* Add padding for better readability */
+//     text-decoration: none; /* Remove underline from anchor tags */
+//     color: #333; /* Set text color */
+//     background-color: #f0f0f0; /* Set background color */
+//     transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+//   }
+  
+//   /* Hover effect for anchor tags */
+//   ul li a:hover {
+//     background-color: #007bff; /* Change background color on hover */
+//     color: #fff; /* Change text color on hover */
+//   }
+
+//   .footer {
+//     background-color: #333; /* Background color */
+//     color: #fff; /* Text color */
+//     padding: 20px 0; /* Padding top and bottom */
+//     text-align: center; /* Center align text */
+
+//     a {
+//         color: #fff; /* Link color */
+//         text-decoration: none; /* Remove underline */
+        
+//         &:hover {
+            
+//             text-decoration: underline; /* Add underline on hover */
+//         }
+//     }
+//   }

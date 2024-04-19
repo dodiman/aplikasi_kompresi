@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename="style_info.css") }}" />
+{% endblock %}
+
+
+{% block content %}
+{% include "include/sidebar.html" %}
+<div class="kotak-info">
+    <div class="kotak-foto">
+        <div class="text">
+            foto
+        </div>
+    </div>
+    <div class="kotak-keterangan">
+        <h2>keterangan</h2>
+    </div>
+</div>
+{% endblock %}

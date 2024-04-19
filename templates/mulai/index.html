@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename="halaman_mulai.css") }}" />
+{% endblock %}
+
+{% block content %}
+{% include "include/sidebar.html" %}
+
+<form id="myform" method="post" enctype="multipart/form-data">
+
+    <div class="kotak-form">
+        <div class="kotak-input">
+            <label id="label_input" for="mydata">Pilih file</label>
+            <input id="mydata" name="mydata" type="file" accept=".pdf" />
+        </div>
+        
+
+        <div id="kotak_deskripsi" class="kotak-deskripsi">
+            <p>Deskripsi:</p>
+            <p><strong>Nama File </strong> <span id="nama_file"></span></p>
+            <p><strong>Ukuran File  </strong> <span id="ukuran_file"></span></p>
+        </div>
+
+        <div class="kotak-tombol">
+            <button type="submit" class="tombol1">Kompres</button>
+        </div>
+
+        <div class="kotak-loading" id="loader">
+            <div class="loader"></div>
+        </div>
+    </div>
+</form>
+    
+
+
+<div class="kotak-informasi" id="kotak_informasi">
+    <div class="kotak-aksi">
+        <div class="tombol1" id="tombol_simpan_hasil_kompresi">
+            Simpan Hasil Kompresi 
+            <div class="loader2" id="loader2"></div>
+        </div>
+
+        <div class="tombol-dekompresi">
+            <label id="label_dekompresi" for="my_file">Dekompresi</label>
+            <input id="my_file" name="my_file" type="file" accept=".pdf, .txt" />
+            <div class="loader2" id="loader3"></div>
+        </div>
+    </div>
+
+    <div class="kotak-tabel">
+        <h2>Keterangan</h2>
+        <p><strong>Ukuran Sebelum: </strong><span id="ukuran_sebelum"></span></p>
+        <p><strong>Ukuran Setelah: </strong><span id="ukuran_setelah"></span></p>
+        <p><strong>Nilai Rc (Ratio of Compression): </strong><span id="nilai_rc"></span></p>
+        <p><strong>Nilai Cr (Compression Ratio): </strong><span id="nilai_cr"></span></p>
+        <p><strong>Nilai SS (Space Saving): </strong><span id="nilai_ss"></span></p>
+        <p><strong>Waktu : </strong> <span id="waktu"></span></p>
+        
+        
+    </div>
+</div>
+
+    
+{% endblock %}
+
+{% block script %}
+<script src="{{ url_for('static', filename="js/axios.min.js") }}"></script>
+<script src="{{ url_for('static', filename="js/mulai.js") }}"></script>
+{% endblock %}
+    

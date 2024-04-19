@@ -1,0 +1,49 @@
+@import 'mixin_utama';
+
+.kotak-logo, .kotak-informasi {
+    @include kotak;
+    @include bayangan;
+    background-color: white;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    margin: 30px auto;
+
+    h2 {
+        @include text;
+    }
+}
+
+.kotak-logo {
+    // @include garis;
+    padding: 10px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.kotak-informasi {
+    @include kotak;
+    // @include garis;
+    width: 80%;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px;
+
+    h2 {
+        // @include garis;
+        // width: 100%;
+        @include text;
+        @include ukuran-huruf(1.5em);
+        padding-bottom: 10px;
+    }
+
+    p {
+        @include text2;
+        text-align: left;
+        text-wrap: wrap;
+    }
+}

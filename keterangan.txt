@@ -1,0 +1,6 @@
+1. install package yang diperlukan
+pip install -r requirements.txt
+
+2. jalankan server
+python -m flask --app app.py run --debug
+cara menjalankan:

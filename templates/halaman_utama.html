@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename="halaman_utama.css") }}" />
+{% endblock %}
+
+{% block content %}
+    <div class="kotak-header">
+        <div class="kotak-judul">
+            
+            <img src="{{ url_for('static', filename='img/logo4.png') }}" alt="logo">
+
+        </div>
+        <div class="kotak-logo">
+            <img src="{{ url_for('static', filename='img/logo3.png') }}" alt="logo">
+        </div>
+    </div>
+
+    <div class="kotak-judul-skripsi">
+        <h2>IMPLEMENTASI KOMPRESI FILE PDF MENGGUNAKAN KOMBINASI ALGORITMA FIBONACCI CODES DAN ALGORITMA LEVENSTEIN CODES</h2>
+        <h5>FAKULTAS MATEMATIKA DAN ILMU PENGETAHUAN ALAM</h5>
+    </div>
+
+    <div class="kotak-konten">
+
+        {# include "include/sidebar.html" #}
+        
+        
+        
+        <div class="kotak-mulai">
+            <a class="tombol" href="{{ url_for('mulai.halaman_mulai') }}">Mulai</a>
+        </div>
+        
+        
+    </div>
+{% endblock %}

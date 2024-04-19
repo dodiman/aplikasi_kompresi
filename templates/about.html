@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename="halaman_about.css") }}" />
+{% endblock %}
+
+{% block content %}
+{% include "include/sidebar.html" %}
+
+<div class="kotak-logo">
+    <!-- <h2>Logo</h2> -->
+    <img src="{{ url_for('static', filename='img/logo_kampus.png') }}" alt="logo">
+</div>
+
+<div class="kotak-informasi">
+    <h2>Universitas Halu Uleo</h2>
+    <p>
+        <strong>Universitas Halu Oleo</strong>, disingkat <strong>UHO</strong>, adalah perguruan tinggi negeri di Kendari, Sulawesi Tenggara, Indonesia, yang berdiri tahun 1964 sebagai perguruan tinggi swasta filial dari Universitas Hasanuddin Makassar.[1] UHO awalnya adalah universitas swasta yang didirikan oleh Drs. H. La Ode Manarfa dan Drs. La Ode Malim. Berdasarkan Keputusan Presiden Republik Indonesia Nomor 37 tahun 1981 UHO secara resmi menjadi perguruan tinggi negeri ke 42 di Indonesia, tepatnya pada 19 Agustus 1981. Dalam catatan sejarah UHO, Drs. La Ode Malim merupakan Rektor UHO pertama. Rektor Unhalu berikutnya ketika UHO menjadi Universitas Negeri adalah Prof. H. Eddy Agussalim Mokodompit, M.A. yang namanya kemudian diabadikan pada auditorium kampus Universitas Halu Oleo. Kemudian Universitas Halu Oleo dipimpin oleh Usman Rianse putra berdarah Muna. Rektor pada saat ini adalah Prof. Dr. Muh. Zamrun Firihu, S.Si., M.Si., M.Sc.
+    </p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,148 @@
+@import 'mixin_utama';
+
+// hilangkan tombol input file
+input[type="file"] {
+    display: none;
+}
+
+.tombol1 {
+    @include tombol4;
+    @include text;
+}
+
+.kotak-informasi {
+    @include kotak;
+    // @include garis;
+    @include bayangan;
+    background-color: white;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+    width: 65%;
+    // height: 450px;
+    margin: 0 auto;
+
+    .kotak-aksi {
+        @include kotak;
+        // @include garis;
+        justify-content: flex-start;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .kotak-tabel {
+        // @include garis;
+        @include kotak;
+        flex-wrap: wrap;
+        padding: 10px 10px;
+
+        h2, p {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.kotak-form {
+    // @include garis;
+    @include kotak;
+    @include bayangan;
+    background-color: white;
+    border-radius: 10px;
+    width: 40%;
+    flex-wrap: wrap;
+    padding: 30px;
+    justify-content: start;
+    gap: 20px;
+    margin: 20px auto;
+
+    .kotak-input {
+        // @include garis;
+        width: auto;
+        
+        label {
+            padding: 10px;
+            background-color: rgb(223, 96, 96);
+            cursor: pointer;
+            color: white;
+            border-radius: 5px;
+            &:hover {
+                background-color: red;
+            }
+        
+        }
+        .keterangan {
+            background-color: white;
+            color: black;
+            cursor: unset;
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .kotak-deskripsi {
+        // @include garis;
+        @include kotak;
+        width: 100%;
+        display: none;
+
+        p {
+            // @include garis;
+            @include text;
+            // @include garis;
+            margin-bottom: 10px;
+            justify-content: flex-start;
+            gap: 10px;
+
+            span {
+                // @include garis;
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    .kotak-tombol {
+        @include kotak;
+        // @include garis;
+        width: 100%;
+        justify-content: start;
+        background-color: transparent;
+    }
+}
+
+.lainnya {
+    @extend .loader;
+}
+
+.loader2 {
+    // @include garis;
+    @extend .loader2;
+
+    // width: auto;
+
+}
+
+.tombol-dekompresi {
+    // @include garis;
+    @include kotak;
+    
+    label {
+        // @include garis;
+        background-color: rgb(88, 101, 242);
+        @include text;
+        color: white;
+        border-radius: 3px;
+        padding: 5px 16px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(71, 82, 196);
+        }
+        
+    }
+}

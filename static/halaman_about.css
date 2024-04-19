@@ -1,0 +1,113 @@
+/* Breakpoints
+-------------------------*/
+/* Text overflow
+-------------------------*/
+/* Retina Images
+-------------------------*/
+/* atribut yang saya buat
+-------------box------------*/
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 40px;
+  height: 60px;
+  position: relative;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #514b82;
+  clip-path: polygon(0 0, 100% 0, 100% 67%, 50% 67%, 50% 34%, 0 34%);
+  animation: sp7 2s infinite;
+}
+
+.loader::after {
+  --s:-1,-1;
+}
+
+@keyframes sp7 {
+  0%, 10% {
+    transform: scale(var(--s, 1)) translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: scale(var(--s, 1)) translate(0, -20px) rotate(0deg);
+  }
+  66% {
+    transform: scale(var(--s, 1)) translate(10px, -20px) rotate(-90deg);
+  }
+  90%, 100% {
+    transform: scale(var(--s, 1)) translate(10px, -10px) rotate(-90deg);
+  }
+}
+/* HTML: <div class="loader2"></div> */
+.loader2 {
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 6px;
+  background: conic-gradient(from 135deg at top, currentColor 90deg, rgba(0, 0, 0, 0) 0) 0 calc(50% - 4px)/17px 8.5px, radial-gradient(farthest-side at bottom left, rgba(0, 0, 0, 0) calc(100% - 6px), currentColor calc(100% - 5px) 99%, rgba(0, 0, 0, 0)) top right/50% 50% content-box content-box, radial-gradient(farthest-side at top, rgba(0, 0, 0, 0) calc(100% - 6px), currentColor calc(100% - 5px) 99%, rgba(0, 0, 0, 0)) bottom/100% 50% content-box content-box;
+  background-repeat: no-repeat;
+  animation: l11 1s infinite linear;
+}
+
+@keyframes l11 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.kotak-logo, .kotak-informasi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  margin: 30px auto;
+}
+.kotak-logo h2, .kotak-informasi h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+}
+
+.kotak-logo {
+  padding: 10px;
+}
+.kotak-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.kotak-informasi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.kotak-informasi h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+}
+.kotak-informasi p {
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+  text-align: left;
+  text-wrap: wrap;
+}
