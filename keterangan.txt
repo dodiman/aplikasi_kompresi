@@ -3,4 +3,5 @@ pip install -r requirements.txt
 
 2. jalankan server
 python -m flask --app app.py run --debug
-cara menjalankan:
+
+3. pastikan browser mengizinkan link aplikasi (http://127.0.0.1:5000)
